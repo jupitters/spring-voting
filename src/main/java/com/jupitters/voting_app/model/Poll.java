@@ -7,6 +7,9 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
+@Data
+@NoArgsConstructor
 public class Poll {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
