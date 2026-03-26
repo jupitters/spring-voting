@@ -20,7 +20,7 @@ public class PollServiceImpl implements PollService {
 
     @Override
     public List<Poll> getAllPolls(){
-        return null;
+        return pollRepository.findAll();
     }
 
 }
