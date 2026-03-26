@@ -8,4 +8,5 @@ import java.util.List;
 public interface PollService {
     Poll createPoll(Poll poll);
     List<Poll> getAllPolls();
+    Poll getPollById(Long id);
 }
