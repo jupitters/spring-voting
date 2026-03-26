@@ -26,6 +26,6 @@ public class PollServiceImpl implements PollService {
 
     @Override
     public Optional<Poll> getPollById(Long id) {
-        return Optional.ofNullable(pollRepository.findById(id).orElse(null));
+        return pollRepository.findById(id);
     }
 }
