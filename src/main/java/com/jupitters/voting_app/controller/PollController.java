@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/polls")
@@ -17,5 +19,9 @@ public class PollController {
     @PostMapping
     public Poll createPoll(@RequestBody Poll poll){
         return pollService.createPoll(poll);
+    }
+
+    public List<Poll> getAllPolls(){
+        return pollService.getAllPolls();
     }
 }
