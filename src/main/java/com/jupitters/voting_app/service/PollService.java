@@ -10,4 +10,6 @@ public interface PollService {
     Poll createPoll(Poll poll);
     List<Poll> getAllPolls();
     Optional<Poll> getPollById(Long id);
+
+    void vote();
 }

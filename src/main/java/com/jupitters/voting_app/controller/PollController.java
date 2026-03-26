@@ -1,6 +1,7 @@
 package com.jupitters.voting_app.controller;
 
 import com.jupitters.voting_app.model.Poll;
+import com.jupitters.voting_app.request.Vote;
 import com.jupitters.voting_app.service.PollService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +34,6 @@ public class PollController {
 
     @PostMapping("/vote")
     public void vote(@RequestBody Vote vote){
-       ; //return pollService.vote();
+       return pollService.vote();
     }
 }
