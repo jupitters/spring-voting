@@ -4,9 +4,10 @@ import com.jupitters.voting_app.model.Poll;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PollService {
     Poll createPoll(Poll poll);
     List<Poll> getAllPolls();
-    Poll getPollById(Long id);
+    Optional<Poll> getPollById(Long id);
 }

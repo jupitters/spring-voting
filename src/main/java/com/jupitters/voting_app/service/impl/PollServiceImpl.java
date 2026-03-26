@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -24,7 +25,7 @@ public class PollServiceImpl implements PollService {
     }
 
     @Override
-    public Poll getPollById(Long id) {
-        return pollRepository.findById(id).orElse(null);
+    public Optional<Poll> getPollById(Long id) {
+        return Optional.ofNullable(pollRepository.findById(id).orElse(null));
     }
 }
