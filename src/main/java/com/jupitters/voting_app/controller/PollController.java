@@ -3,10 +3,7 @@ package com.jupitters.voting_app.controller;
 import com.jupitters.voting_app.model.Poll;
 import com.jupitters.voting_app.service.PollService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +18,7 @@ public class PollController {
         return pollService.createPoll(poll);
     }
 
+    @GetMapping
     public List<Poll> getAllPolls(){
         return pollService.getAllPolls();
     }
