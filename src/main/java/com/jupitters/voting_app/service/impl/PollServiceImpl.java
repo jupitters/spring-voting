@@ -28,4 +28,9 @@ public class PollServiceImpl implements PollService {
     public Optional<Poll> getPollById(Long id) {
         return pollRepository.findById(id);
     }
+
+    @Override
+    public void vote(Long pollId, int optionIndex) {
+
+    }
 }
