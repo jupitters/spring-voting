@@ -31,6 +31,7 @@ public class PollController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @PostMapping("/vote")
     public void vote(@RequestBody Vote vote){
        ; //return pollService.vote();
     }
