@@ -30,4 +30,8 @@ public class PollController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    public void vote(@RequestBody Vote vote){
+       ; //return pollService.vote();
+    }
 }
